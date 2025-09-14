@@ -1,0 +1,124 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', sans-serif; background:#f6f6f6; color:#333; line-height:1.6; transition: all 0.3s; }
+
+html {
+  scroll-behavior: smooth;  /* 👈 enables smooth scroll */
+}
+
+/* Navbar */
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 5%; position:sticky; top:0;   background: transparent;  box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+.logo { font-weight:bold; font-size:1.2rem; }
+.nav-links a {
+  position: relative;      /* needed for the underline */
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;            /* place underline slightly below text */
+  right: 0;                /* start from the right */
+  width: 0;
+  height: 2px;
+  background: #ffc727;     /* yellow underline */
+  transition: width 0.3s ease, right 0.3s ease;
+}
+.nav-links a.active {
+  color: #ffc727; /* yellow text when active */
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;                /* animate leftwards */
+}
+.nav-links a.active::after {
+  width: 100%;   /* underline always visible */
+  left: 0;
+}
+
+.dark-toggle { background:none; border:none; font-size:1.2rem; cursor:pointer; }
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.hero-left {
+  flex: 1;
+  z-index: 2; /* text above background */
+}
+
+.hero-right {
+  position: absolute;
+  top: 0;      /* 👈 starts from top of page */
+  right: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-combined {
+  height: 100%;
+  max-height: 100vh;  /* fill vertically */
+  width: auto;
+}
+/* Buttons */
+.btn { padding:0.8rem 1.5rem; border-radius:8px; font-weight:bold; text-decoration:none; margin-right:1rem; display:inline-block; }
+.btn.primary { background:#ffc727; color:#000; }
+.btn.secondary { background:#fff; border:2px solid #000; color:#000; }
+
+/* Sections */
+section { padding:5% 10%; }
+h2 { font-size:2rem; margin-bottom:1rem; }
+
+/* Projects */
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; }
+.project-card { background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; }
+
+/* Contact */
+form { display:flex; flex-direction:column; max-width:500px; }
+form input, form textarea { margin-bottom:1rem; padding:0.8rem; border-radius:8px; border:1px solid #ccc; }
+form button { align-self:flex-start; }
+
+/* Footer */
+footer { text-align:center; padding:2rem; background:#222; color:#fff; }
+
+/* Dark Mode */
+body.dark { background:#121212; color:#eee; }
+body.dark .navbar { background:#1f1f1f; }
+body.dark .nav-links a { color:#eee; }
+body.dark .nav-links a.active {   color: #ffc727; }
+body.dark .hero-right { background:#ffc727;; }
+body.dark .btn.secondary { background:#222; color:#fff; border:2px solid #fff; }
+body.dark .project-card { background:#1f1f1f; color:#eee; }
+body.dark footer { background:#000; }
+
+
+/* RESPONSIVE MEDIA QUERIES     */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .hero { flex-direction:column; text-align:center; }
+  .hero-left { align-items:center; }
+  .hero-left h1 { font-size:2rem; }
+  .nav-links a { margin-left:1rem; font-size:0.9rem; }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .navbar { flex-direction:column; gap:0.5rem; }
+  .hero { padding:2rem 1rem; }
+  .hero-left h1 { font-size:1.6rem; }
+  .buttons { display:flex; flex-direction:column; align-items:center; }
+  .buttons .btn { margin:0.5rem 0; }
+  h2 { font-size:1.5rem; }
+}
