@@ -1,53 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Your Name</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Madelyn Torff</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">NAZNIN</div>
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="about.html">About</a>
-      <a href="project.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-  </header>
-
+  
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero"> 
+    <div class="logo">PORTFOLIO</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contacts</a>
+    </nav>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
     <div class="hero-left">
-      <p class="tag">DEVELOPER</p>
-      <h1>Hello, my name is <span>Your Name</span></h1>
-      <p class="intro">I design and build clean, user-friendly interfaces and experiences. Passionate about design and technology.</p>
-      <div class="buttons">
-        <a href="#projects" class="btn primary">Projects</a>
-        <a href="https://linkedin.com" target="_blank" class="btn secondary">LinkedIn</a>
-      </div>
+      <p class="tag">Software Developer</p>
+      <h1>
+        Hello, my name<br />
+        is Naznin Basheer
+      </h1>
+      <p class="intro">
+        Short text with details about you, what you do or your professional
+        career. You can add more information on the about page.
+      </p>
     </div>
-   <div class="hero-right">
-  <img src="assets\profileImg.svg" alt="Profile with curve" class="hero-combined" />
-</div>
+    <div class="hero-right">
+      <div class="blob-bg"></div>
+      <img
+        src="assets/heroIMG.svg"
+        alt="Profile with curve"
+        class="hero-combined"
+      />
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>Write about yourself here — your journey, skills, and passion. This section helps visitors know you better.</p>
+    <p>
+      I’m Madelyn Torff, a passionate UI/UX Designer with a love for creating
+      intuitive, clean, and user-friendly designs. With experience in 
+      Figma, Adobe XD, and responsive design, I focus on blending creativity
+      and functionality to build seamless digital experiences.
+    </p>
+    <div class="buttons">
+        <a href="project.html" class="btn primary">Projects</a>
+        <a href="https://linkedin.com" target="_blank" class="btn secondary">LinkedIn</a>
+      </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>UI/UX Design (Figma, Adobe XD, Sketch)</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>Prototyping & Wireframing</li>
+      <li>User Research & Testing</li>
+      <li>Agile & Team Collaboration</li>
+    </ul>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate-list">
+      <div class="certificate-card">
+        <h3>Google UX Design Professional Certificate</h3>
+        <p>Issued by Coursera - 2023</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Adobe Certified Professional in Visual Design</h3>
+        <p>Issued by Adobe - 2022</p>
+      </div>
+      <div class="certificate-card">
+        <h3>Frontend Development Bootcamp</h3>
+        <p>Issued by XYZ Academy - 2021</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">Project 1</div>
-      <div class="project-card">Project 2</div>
-      <div class="project-card">Project 3</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-text">
+          <h3>Project Name</h3>
+          <p>
+            I created this personal project in order to show how to create an
+            interface in Figma using a portfolio as an example.
+          </p>
+          <button class="btn view-project">View Project</button>
+        </div>
+        <div class="project-image">
+          <img src="assets/image.png" alt="Yoga project" />
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/image.png" alt="Calendar project" />
+        </div>
+        <div class="project-text">
+          <h3>Project Name</h3>
+          <p>
+            What was your role, your deliverables, if the project was personal,
+            freelancing.
+          </p>
+          <button class="btn view-project">View Project</button>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-text">
+          <h3>Project Name</h3>
+          <p>
+            You can also add in this description the type of the project, if it
+            was for web, mobile, electron.
+          </p>
+          <button class="btn view-project">View Project</button>
+        </div>
+        <div class="project-image">
+          <img src="assets/image.png" alt="Mobile project" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -55,17 +139,29 @@
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message"></textarea>
       <button type="submit" class="btn primary">Send</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="LinkedIn">
+        <img src="assets\linkedin.png" alt="LinkedIn icon"/>
+      </a>
+      <a href="#" aria-label="GitHub">
+        <img src="assets\github.png" alt="GitHub icon"/>
+      </a>   
+      <a href="#" aria-label="Email">
+        <img src="assets\mail.png" alt="Email icon"/>
+      </a>
+    </div>
+    <p>Madelyn Torff 2021</p>
+    <div class="footer-curve"></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
