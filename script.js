@@ -5,9 +5,9 @@ function toggleDarkMode() {
   body.classList.toggle("dark");
 
   if (body.classList.contains("dark")) {
-    button.textContent = "🌙"; // show sun in dark mode
+    button.textContent = "☀️"; // show sun in dark mode
   } else {
-    button.textContent = "☀️"; // show moon in light mode
+    button.textContent = "🌙"; // show moon in light mode
   }
 }
 
