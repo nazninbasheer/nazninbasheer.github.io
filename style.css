@@ -108,6 +108,9 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+.hero-left p {
+  color:var(--dark-bg);
+}
 
 .hero-left .intro {
   margin-bottom: 1.5rem;
@@ -250,7 +253,7 @@ h2 {
 
 .about p {
   font-size: 1rem;
-  color: #555;
+  color:var(--dark-bg);
   line-height: 1.7;
 }
 .about .buttons {
@@ -297,7 +300,7 @@ h2 {
 }
 
 .skill-card {
-  background: gray;
+  background: rgb(218, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,6 +308,8 @@ h2 {
   border-radius: 0.5rem;
   width: 160px;
   height: 140px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card img {
@@ -317,7 +322,9 @@ h2 {
 .skill-card img:hover {
   transform: scale(1.1);
 }
-
+.skill-card:hover {
+  transform: scale(1.1); 
+}
 .skill-card p {
   font-weight: 700;
   font-size: 1rem;
@@ -349,7 +356,6 @@ h2 {
   margin: 8px auto 0;
   border-radius: 2px;
 }
-
 .certificate-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -363,43 +369,84 @@ h2 {
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
-  transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
-}
-
-.certificate-card:hover {
-  transform: translateY(-5px);
-  padding-bottom: 2rem;
+  height: 150px;  
+  transition: transform 0.3s ease,  height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+  box-shadow 0.5s ease;
 }
 
 .certificate-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #000;
+  transition:transform 0.4s ease, opacity 0.4s ease, color 0.4s ease;
 }
 
 .certificate-card p {
   font-size: 0.9rem;
   color: #777;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .certificate-card img {
   width: 100%;
   max-height: 0;
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
   margin-top: 1rem;
   border-radius: 10px;
+  transform: translateY(0);
+}
+
+/* On hover: only this card shows its image */
+.certificate-card:hover {
+  transform: translateY(-5px);
+  height: 380px; 
+  box-shadow: 0 8px 25px rgba(105, 60, 0, 0.6); /* glowing golden */
+
 }
 
 .certificate-card:hover img {
-  max-height: 250px; /* expand to reveal image */
+  max-height: 250px;
   opacity: 1;
 }
+
+.certificate-card:hover h3 {
+  transform: translateY(-10px) scale(0.93);
+  opacity: 0.9;
+}
+/* =========================
+   Certificate Page Cards
+   ========================= */
+.certificate-page .certificate-card {
+  height: auto;  
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-page .certificate-card img {
+  max-height: none;  
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: slightly bigger + glowing shadow */
+.certificate-page .certificate-card:hover {
+  transform: scale(1.03); /* slight enlargement */
+  box-shadow: 0 8px 25px  rgba(105, 60, 0, 0.6); /* glowing golden */
+}
+
+.certificate-page .certificate-card:hover img {
+  transform: scale(1.02); /* slight zoom on image */
+}
+
+
 /* =====================
    PROJECTS SECTION
    ===================== */
+ 
 .projects {
   padding: 5% 10%;
   background: var(--light-bg);
@@ -425,49 +472,64 @@ h2 {
 
 .project-card {
   display: flex;
-  max-width: 900px;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
   margin: 0 auto;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
 }
-
-.project-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
+ 
 .project-text {
   flex: 1;
-  padding: 2rem 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.6s ease;
 }
-
-.project-text p {
-  color: #777;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+.project-text p{
+  color: #000;
 }
-
+ 
 .project-image {
-  flex: 1;
+  flex: 0;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+  pointer-events: none;
+  height: 200px;
+  overflow: hidden;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.project-card img {
   border-radius: 0 20px 20px 0;
+  display: block; 
+}
+ 
+.project-card:hover {
+  transform: scale(1.09);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);  
+}
+ 
+.project-card:hover .project-image {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  flex: 0 0 250px;
+}
+ 
+.project-card:hover .project-text {
+  text-align: left;
+  padding: 2rem 3rem;
+  transform: translateX(-5px);
 }
 
-.project-card:nth-child(even) img {
-  border-radius: 20px 0 0 20px;
-}
 
 /* =====================
    CONTACT SECTION
@@ -622,8 +684,12 @@ body.dark .certificates {
 
 body.dark .certificate-card {
   background: var(--dark-card);
-  color: #eee;
 }
+
+body.dark .certificate-card h3, p {
+  color: var(--light-bg);
+}
+
 body.dark .projects {
   background: var(--dark-bg);
 }
@@ -641,6 +707,18 @@ body.dark .projects {
   }
   .nav-links {
     gap: 1rem;
+  }
+  .project-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .project-card:hover .project-text {
+    transform: translateY(-10px);
+    text-align: center;
+    padding: 2rem;
+  }
+  .project-image img {
+    border-radius: 0 0 20px 20px;
   }
 }
 
