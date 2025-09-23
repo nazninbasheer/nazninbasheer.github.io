@@ -633,7 +633,9 @@ body.dark {
   background: var(--dark-bg);
   color: #eee;
 }
-
+body.dark .hero-left p {
+  color:var(--light-bg);
+}
 body.dark .nav-links a {
   color: #eee;
 }
