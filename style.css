@@ -14,6 +14,10 @@
   --light-bg: #f6f6f6;
   --font-body: 'Segoe UI', sans-serif;
   --font-heading: 'Georgia', serif;
+  --glow-color: #333;
+}
+body.dark {
+  --glow-color: #ffff; /* golden for dark mode */
 }
 
 body {
@@ -108,6 +112,7 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .hero-left p {
   color:var(--dark-bg);
 }
@@ -272,6 +277,95 @@ h2 {
   margin: 8px auto 0;
   border-radius: 2px;
 }
+
+/* Education Section */
+.education-section {
+  width: 100%;           /* take full width */
+  max-width: none;       /* remove restriction */
+  margin: 0;             /* no auto centering */
+  padding: 5% 10%; 
+  text-align: center;
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  position: relative;
+}
+
+.education-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--brand-yellow);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Each item: row layout */
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 9rem;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+/* Left side: Year */
+.education-item .year {
+  min-width: 80px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--brand-yellow);
+}
+
+/* Right side: Content */
+.education-item .c123 h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-item .c123 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark-bg);
+}
+
+/* Separator */
+.education-section hr {
+  border: none;
+  border-top: 2px solid var(--brand-yellow);
+  width: 100%;         /* full width of the parent */
+  margin: 1.5rem 0; 
+  opacity: 0.6;
+}
+
+/* Fade-in animation (with scroll) */
+.fade-in-on-scroll {
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.linkedin-badge {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Default: show dark badge, hide light badge */
+.dark-badge { display: none ; }
+.light-badge { display: block; }
 
 /* =====================
    SKILLS SECTION
@@ -666,6 +760,10 @@ body.dark .about p {
   color: #bbb;
 }
 
+body.dark .education-item .c123 p {
+  color: var(--light-bg);
+}
+
 body.dark .skills {
   background: var(--dark-bg);
 }
@@ -695,6 +793,74 @@ body.dark .certificate-card h3, p {
 body.dark .projects {
   background: var(--dark-bg);
 }
+body.dark .typing {
+  border-right: 2px solid var(--dark-bg);
+}
+ 
+body.dark .dark-badge { display: block; }
+body.dark .light-badge { display: none; }
+
+/* =====================
+    animation 
+   ===================== */
+/* Fade-in for other texts */
+.fade-seq {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+.delay1 { animation-delay: 0.2s; }
+.delay2 { animation-delay: 0.8s; }
+.delay3 { animation-delay: 1.5s; }
+.delay4 { animation-delay: 2.8s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing effect */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--cursor-color, #000);
+}
+
+
+/* hero image */
+
+.hero-right .hero-combined {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -90px;
+  right: 0;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* Glowing animation using drop-shadow */
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 199, 39, 0.3))
+            drop-shadow(0 0 10px rgba(255, 199, 39, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 199, 39, 0.7))
+            drop-shadow(0 0 30px rgba(255, 199, 39, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 199, 39, 0.3))
+            drop-shadow(0 0 10px rgba(255, 199, 39, 0.2));
+  }
+}
+
+.hero-combined.glow {
+  opacity: 1;
+  animation: glowPulse 2s infinite alternate;
+}
+
+
 /* =====================
    RESPONSIVE
    ===================== */
@@ -721,6 +887,23 @@ body.dark .projects {
   }
   .project-image img {
     border-radius: 0 0 20px 20px;
+  }
+  .education-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .education-item .year {
+    font-size: 1rem;
+    min-width: unset;
+  }
+
+  .education-item .c123 h3 {
+    font-size: 1rem;
+  }
+
+  .education-item .c123 p {
+    font-size: 0.9rem;
   }
 }
 

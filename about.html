@@ -20,27 +20,88 @@
     </nav>
     <button class="dark-toggle" onclick="toggleDarkMode()"></button>
   </header>
+ <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+  <p>
+    Hello! I’m Naznin Basheer, a versatile Software Developer with experience 
+    across mobile, web, and backend technologies. I focus on blending creativity
+      and functionality to build seamless digital experiences.And i specialize in iOS (Swift, 
+    SwiftUI), Android (Kotlin), and cross-platform development with Flutter. 
+    On the backend, I build scalable APIs and applications using Node.js, 
+    Express, and Spring Boot, connected with databases like MySQL, PostgreSQL, 
+    MongoDB, and Firebase.  
+  </p>
+  <p>
+    Beyond coding, I love designing intuitive user experiences in Figma and 
+    collaborating on projects that solve real problems. I’m always eager to 
+    learn, explore new technologies, and contribute to impactful products.
+  </p>
+  <p>
+    When I’m not programming, you’ll probably find me exploring new ideas, 
+    learning something creative, or helping others in tech communities.
+  </p>
+  <div class="linkedin-badge">
+  <!-- Dark theme badge (for light mode) -->
+  <div class="badge-base LI-profile-badge dark-badge" 
+  data-locale="en_US" data-size="medium"
+   data-theme="dark" data-type="HORIZONTAL"
+    data-vanity="nazninbasheer21" data-version="v1">
+    <a class="badge-base__link LI-simple-link" 
+    href="https://in.linkedin.com/in/nazninbasheer21?trk=profile-badge">
+    </a></div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-left">
-      <p class="tag">DEVELOPER</p>
-      <h1>Hello, my name is <span>Your Name</span></h1>
-      <p class="intro">I design and build clean, user-friendly interfaces and experiences. Passionate about design and technology.</p>
-      <div class="buttons">
-        <a href="project.html" class="btn primary">Projects</a>
-        <a href="https://linkedin.com" target="_blank" class="btn secondary">LinkedIn</a>
-      </div>
+  <!-- Light theme badge (for dark mode) -->
+  <div class="badge-base LI-profile-badge light-badge"
+   data-locale="en_US" data-size="medium"
+    data-theme="light" data-type="HORIZONTAL" 
+    data-vanity="nazninbasheer21" data-version="v1">
+    <a class="badge-base__link LI-simple-link"
+     href="https://in.linkedin.com/in/nazninbasheer21?trk=profile-badge">
+     </a></div>
+</div>
+</section>
+ <div class="about-edu">
+       <section class="education-section">
+  <h2 class="fade-in-on-scroll">Education Journey</h2>
+
+  <div class="education-item fade-in-on-scroll">
+    <div class="year">2024</div>
+    <div class="c123">
+      <h3>MVoc Software Application</h3>
+      <p>Currently pursuing a Master of Vocational Education in Software Application at CUSAT,
+        focusing on advanced programming techniques and software development.</p>
     </div>
-    <div class="hero-right">
-      <img src="assets/profile.png" alt="Your photo">
+  </div>
+  <hr class="fade-in-on-scroll">
+
+  <div class="education-item fade-in-on-scroll">
+    <div class="year">2021</div>
+    <div class="c123">
+      <h3>Bachelor's in Computer Application</h3>
+      <p>Completed my undergraduate studies in Computer Application, where I gained a solid foundation in programming,
+        algorithms, and software engineering.</p>
     </div>
-  </section>
+  </div>
+  <hr class="fade-in-on-scroll">
+
+  <div class="education-item fade-in-on-scroll">
+    <div class="year">2019</div>
+    <div class="c123">
+      <h3>Higher Secondary</h3>
+      <p>Completed my Higher Secondary studies in Computer Science, which paved the way to my computer field.</p>
+    </div>
+  </div>
+</section>
+
+</div>
 
   <footer>
     <p>© 2025 Your Name. All rights reserved.</p>
   </footer>
 <script src="script.js"></script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
 </body>
 </html>
 
@@ -52,64 +113,3 @@
                <!-- Black mode of linkedin -->
                 <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="nazninbasheer21" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/nazninbasheer21?trk=profile-badge">Naznin Basheer</a></div>
                -->
-
-
-
-
-
-               <!-- 
-/* navbar */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  top: 0;
-  background: transparent;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- 
-}
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.nav-links a {
-  position: relative; /* needed for the underline */
-  margin-left: 2rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px; /* place underline slightly below text */
-  right: 0; /* start from the right */
-  width: 0;
-  height: 2px;
-  background: #ffc727; /* yellow underline */
-  transition: width 0.3s ease, right 0.3s ease;
-}
-.nav-links a.active {
-  color: #ffc727; /* yellow text when active */
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-  left: 0; /* animate leftwards */
-}
-.nav-links a.active::after {
-  width: 100%; /* underline always visible */
-  left: 0;
-}
-
-.dark-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
- -->
