@@ -233,6 +233,11 @@ h2 {
   color: #000;
 }
 
+
+.btn.secondary:hover {
+  background: var(--brand-yellow);
+  color: #fff;
+}
 .btn.view-project {
   background: transparent;
   border: 1px solid #000;
@@ -251,31 +256,57 @@ h2 {
    ===================== */
 .about {
   padding: 5% 10%;
-  text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.about p {
-  font-size: 1rem;
-  color:var(--dark-bg);
-  line-height: 1.7;
-}
-.about .buttons {
-  display:block;
-  flex-wrap: wrap;
-  gap: 1rem; 
-  margin-top: 2rem;
+/* Flex container for text + image */
+.about-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* makes it responsive */
 }
 
-.about h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--brand-yellow);
-  margin: 8px auto 0;
-  border-radius: 2px;
+/* Text styling */
+.about-text {
+  flex: 3 1 50%;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+span {
+  color: var(--brand-yellow);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--dark-bg);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-img {
+  float: right;
+  width: 280px;
+  height: 280px;
+  background-color: var(--brand-yellow);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--brand-yellow);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+  margin-left: 8px;
+  margin-bottom: 8px;
+  shape-outside: circle(50%);
+  shape-margin: 8px;
+  -webkit-shape-outside: circle(50%);
+  -webkit-shape-margin: 8px;
 }
 
 /* Education Section */
@@ -356,16 +387,6 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
-
-.linkedin-badge {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-/* Default: show dark badge, hide light badge */
-.dark-badge { display: none ; }
-.light-badge { display: block; }
 
 /* =====================
    SKILLS SECTION
@@ -904,6 +925,18 @@ body.dark .light-badge { display: none; }
 
   .education-item .c123 p {
     font-size: 0.9rem;
+  }
+   .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    flex: 1 1 100%;
+  }
+  
+  .about-image {
+    margin-top: 2rem;
   }
 }
 
