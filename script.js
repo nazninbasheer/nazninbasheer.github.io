@@ -31,12 +31,13 @@ function toggleDarkMode() {
 // ==================== NAV HIGHLIGHT ON SCROLL ====================
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
+const verticalNavLinks = document.querySelectorAll(".vertical-nav a");
 
 window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 50;
     const sectionHeight = section.clientHeight;
 
     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -50,6 +51,17 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
+
+  verticalNavLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (current && link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+
+  // Show vertical nav always
+  const verticalNav = document.querySelector(".vertical-nav");
+  verticalNav.classList.add("show");
 })
 
 
