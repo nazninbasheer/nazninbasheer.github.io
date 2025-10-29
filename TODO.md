@@ -1,4 +1,2 @@
-- [x] Add HTML for vertical nav in index.html (after hero, same links as top nav)
-- [x] Add CSS for .vertical-nav: fixed left, vertical, hidden by default, with transitions
-- [x] Update script.js: Add scroll event to show/hide vertical nav when past hero
-- [x] Test scrolling behavior
+- [x] Modify script.js to show vertical navbar only when scrolled away from hero section
+- [x] Adjust scroll logic to prevent skills from being selected by default on page load

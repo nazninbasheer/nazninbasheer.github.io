@@ -32,18 +32,23 @@ function toggleDarkMode() {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 const verticalNavLinks = document.querySelectorAll(".vertical-nav a");
+const heroSection = document.querySelector("#home");
 
 window.addEventListener("scroll", () => {
   let current = "";
+  const heroHeight = heroSection ? heroSection.offsetHeight : 0;
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 50;
-    const sectionHeight = section.clientHeight;
+  // Only activate navigation if scrolled past a small threshold to prevent default selection
+  if (scrollY > 50) {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 50;
+      const sectionHeight = section.clientHeight;
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
@@ -59,9 +64,13 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Show vertical nav always
+  // Show vertical nav only when scrolled away from hero section
   const verticalNav = document.querySelector(".vertical-nav");
-  verticalNav.classList.add("show");
+  if (scrollY > heroHeight - 100) { // Adjust threshold as needed
+    verticalNav.classList.add("show");
+  } else {
+    verticalNav.classList.remove("show");
+  }
 })
 
 
