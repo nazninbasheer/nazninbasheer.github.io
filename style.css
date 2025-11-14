@@ -474,10 +474,34 @@ span {
   border-radius: 2px;
 }
 
+.skills h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  padding: 0.5rem 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-align: center;
+  color: var(--dark-bg);
+}
+
+.skills h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--brand-yellow);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+body.dark .skills h3 {
+  color: var(--light-bg);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 4rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -488,9 +512,9 @@ span {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  width: 160px;
-  height: 140px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  
+  width: 140px;
+  height: 120px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
