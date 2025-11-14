@@ -477,7 +477,7 @@ span {
 .skills h3 {
   font-size: 1.5rem;
   margin: 2rem 0 1rem 0;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   font-family: var(--font-heading);
   font-weight: 700;
   text-align: center;
@@ -503,6 +503,7 @@ body.dark .skills h3 {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .skill-card {
@@ -545,6 +546,12 @@ body.dark .skill-card {
 .see-more {
   text-align: center;
   margin-top: 2rem;
+}
+
+.platforms-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 
