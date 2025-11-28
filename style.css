@@ -819,7 +819,7 @@ body.dark .skill-card {
 footer {
   text-align: center;
   padding: 2rem 0 0;
-  background: var(--light-bg) url('assets/images/Vector.svg') no-repeat center center;
+  background: var(--light-bg) url('assets/images/footerBg.svg') no-repeat center center;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -967,7 +967,8 @@ body.dark .project-card {
 }
 
 body.dark footer {
-  background: #000;
+  background: var(--dark-bg) url('assets/images/footerBg.svg') no-repeat center center;
+  background-size: cover;
 }
 
 body.dark .about p {
