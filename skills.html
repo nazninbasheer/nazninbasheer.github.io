@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
      <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">NAZNIN</div>
+   <div class="logo"><span>My</span> Skills</div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
+      <a href="#skills.html">Skills</a>
       <a href="certificate.html">Certificates</a>
       <a href="project.html">Projects</a>
       <a href="contact.html">Contacts</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()"></button>
     </nav>
-    <button class="dark-toggle" onclick="toggleDarkMode()"></button>
   </header>
 
   
@@ -48,8 +52,16 @@
       <p>Swift</p>
     </div>
     <div class="skill-card">
+      <img src="assets\icons\kotlin.png" alt="Kotlin" />
+      <p>Kotlin</p>
+    </div>
+    <div class="skill-card">
       <img src="assets\icons\php.png" alt="php" />
       <p>PHP</p>
+    </div>
+    <div class="skill-card">
+      <img src="assets\icons\dart.png" alt="Dart" />
+      <p>Dart</p>
     </div>
   </div>
 
@@ -113,7 +125,7 @@
     </div>
     <div class="skill-card">
       <img src="assets\icons\visualstudiocode.png" alt="visualstudiocode" />
-      <p>visualstudiocode</p>
+      <p>VS Code</p>
     </div>
     <div class="skill-card">
       <img src="assets\icons\xcode.png" alt="xcode" />
@@ -121,7 +133,7 @@
     </div>
     <div class="skill-card">
       <img src="assets\icons\androidstudio.png" alt="androidstudio" />
-      <p>androidstudio</p>
+      <p>Android Studio</p>
     </div>
   </div>
 
@@ -137,12 +149,25 @@
     </div>
   </div>
 
-  <!-- Note: HTML5 and CSS3 are not included as they are not in the original list, but if needed, they can be added -->
-</section>
+ </section>
 
 
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+ <footer>
+    <div class="social-icons-f">
+       <a href="https://www.linkedin.com/in/nazninbasheer21/" aria-label="LinkedIn">
+        <img src="assets\icons\linkedin.png" alt="LinkedIn icon"/>
+      </a>
+      <a href="https://github.com/nazninbasheer" aria-label="GitHub">
+        <img src="assets\icons\github.png" alt="GitHub icon"/>
+      </a>
+      <a href="#" aria-label="Email">
+        <img src="assets\icons\mail.png" alt="Email icon"/>
+      </a>
+    </div>
+    <p>Naznin Basheer 2025 😎. All rights reserved.</p>
+    <div class="footer-curve">
+       
+    </div>
   </footer>
 <script src="script.js"></script>
 </body>

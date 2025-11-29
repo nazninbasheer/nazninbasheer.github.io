@@ -110,20 +110,31 @@ document.addEventListener("DOMContentLoaded", () => {
   faders.forEach(fader => eduObserver.observe(fader));
 });
 
+// ==================== HAMBURGER MENU TOGGLE ====================
+function toggleMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+}
+
 // hero image glow
 
-const heroImage = document.querySelector(".hero-combined");
+const heroImages = document.querySelectorAll(".hero-img-small, .hero-img-large");
 
-if (heroImage) {
-  const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        heroImage.classList.add("glow");
-      } else {
-        heroImage.classList.remove("glow");
-      }
-    });
-  }, { threshold: 0.5 });
+heroImages.forEach(heroImage => {
+  if (heroImage) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heroImage.classList.add("glow");
+        } else {
+          heroImage.classList.remove("glow");
+        }
+      });
+    }, { threshold: 0.5 });
 
-  heroObserver.observe(heroImage);
-}
+    heroObserver.observe(heroImage);
+  }
+});

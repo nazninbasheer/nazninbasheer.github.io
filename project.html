@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
      <!-- Navbar -->
   <header class="navbar">
       <div class="logo"><span>My</span> Projects</div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
-      <a href="project.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="certificate.html">Certificates</a>
+      <a href="#project.html">Projects</a>
       <a href="contact.html">Contacts</a>
-     <button class="dark-toggle" onclick="toggleDarkMode()"></button>
-
+      <button class="dark-toggle" onclick="toggleDarkMode()"></button>
     </nav>
      </header>
 
@@ -83,7 +86,21 @@
   </section>
 
   <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <div class="social-icons-f">
+        <a href="https://www.linkedin.com/in/nazninbasheer21/" aria-label="LinkedIn">
+        <img src="assets\icons\linkedin.png" alt="LinkedIn icon"/>
+      </a>
+      <a href="https://github.com/nazninbasheer" aria-label="GitHub">
+        <img src="assets\icons\github.png" alt="GitHub icon"/>
+      </a>
+      <a href="#" aria-label="Email">
+        <img src="assets\icons\mail.png" alt="Email icon"/>
+      </a>
+    </div>
+    <p>Naznin Basheer 2025 😎. All rights reserved.</p>
+    <div class="footer-curve">
+       
+    </div>
   </footer>
 <script src="script.js"></script>
 </body>

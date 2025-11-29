@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
      <!-- Navbar -->
   <header class="navbar">
     <div class="logo">About <span>Me</span></div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
+      <a href="skills.html">Skills</a>
+      <a href="certificate.html">Certificates</a>
       <a href="project.html">Projects</a>
       <a href="contact.html">Contacts</a>
       <button class="dark-toggle" onclick="toggleDarkMode()"></button>
-
     </nav>
    </header>
  <!-- About Section -->
@@ -28,7 +31,8 @@
       <div class="about-text">
 <p>    A versatile Software Developer with experience
             across mobile, web, and backend technologies. 
-                     I focus on blending creativity and functionality to build seamless digital experiences.And i specialize in iOS (Swift,
+                     I focus on blending creativity and functionality to build seamless digital experiences.
+                      </p> <p>And i specialize in iOS (Swift,
             SwiftUI), Android (Kotlin), and cross-platform development with Flutter.
             On the backend, I build scalable APIs and applications using Node.js,
             Express, and Spring Boot, connected with databases like MySQL, PostgreSQL,
@@ -44,15 +48,34 @@
           </p>
 
           <div class="buttons">
-              <a href="#" class="btn secondary">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" class="btn secondary">LinkedIn</a>
+              <a href="https://github.com/nazninbasheer" class="btn secondary">GitHub</a>
+              <a href="https://www.linkedin.com/in/nazninbasheer21/" target="_blank" class="btn secondary">LinkedIn</a>
           </div>
       </div>
     </div>
 </section>
+
+<section class="education-section">
+  <h2 class="fade-in-on-scroll">Internship</h2>
+
+  <div class="education-item fade-in-on-scroll">
+    <div class="year">2025</div>
+    <div class="c123">
+      <h3>Flutter Developer Intern</h3>
+      <p><strong>Seeroo IT Solutions </strong> <span> • 🗓️ </span> May 2025 – Jun 2025 (2 months)</p>
+      <ul>
+       <li>Developed responsive and user-friendly mobile UI using Flutter.</li>
+    <li>Integrated Firebase Authentication and Firestore Database for app functionality.</li>
+    <li>Collaborated with developers on testing, debugging, and feature improvements.</li>
+      </ul>
+      <p><strong>Technologies:</strong> Flutter, Dart, Firebase, Figma</p>
+    </div>
+  </div>
+</section>
+
  <div class="about-edu">
        <section class="education-section">
-  <h2 class="fade-in-on-scroll">Education Journey</h2>
+  <h2 class="fade-in-on-scroll">Education Journey 🎓</h2>
 
   <div class="education-item fade-in-on-scroll">
     <div class="year">2024</div>
@@ -85,8 +108,24 @@
 
 </div>
 
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+
+
+ <footer>
+    <div class="social-icons-f">
+       <a href="https://www.linkedin.com/in/nazninbasheer21/" aria-label="LinkedIn">
+        <img src="assets\icons\linkedin.png" alt="LinkedIn icon"/>
+      </a>
+      <a href="https://github.com/nazninbasheer" aria-label="GitHub">
+        <img src="assets\icons\github.png" alt="GitHub icon"/>
+      </a>
+      <a href="#" aria-label="Email">
+        <img src="assets\icons\mail.png" alt="Email icon"/>
+      </a>
+    </div>
+    <p>Naznin Basheer 2025 😎. All rights reserved.</p>
+    <div class="footer-curve">
+       
+    </div>
   </footer>
 <script src="script.js"></script>
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
