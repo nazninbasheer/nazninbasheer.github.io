@@ -209,6 +209,7 @@ h2 ,h1 {
   top: 0;
   right: -50px;
   width: 500px;
+  height: 500px;
   z-index: 10;
   flex: 1 1 300px;
   display: flex;
@@ -1451,11 +1452,10 @@ body.dark .hamburger i {
     font-size: 1.6rem;
     top: 14rem;
   }
-  .hero-right { 
+ .hero-img-small {
   border-radius: 50%;
-  overflow: hidden;    
-  }
- 
+}
+
   
   .hamburger {
     display: flex;
