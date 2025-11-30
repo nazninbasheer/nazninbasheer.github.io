@@ -4,7 +4,7 @@
   const body = document.body;
   const button = document.querySelector(".dark-toggle");
 
-  if (savedTheme === "dark") {
+  if (savedTheme !== "light") {
     body.classList.add("dark");
     if (button) button.textContent = "☀️"; // show sun
   } else {

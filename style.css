@@ -17,7 +17,7 @@
   --glow-color: #333;
 }
 body.dark {
-  --glow-color: #ffff; /* golden for dark mode */
+  --glow-color: #ffff;  
 }
 
 body {
