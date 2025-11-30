@@ -117,13 +117,15 @@ function toggleMenu() {
   navLinks.classList.toggle('active');
 }
 
-// hero image glow
+// hero image glow and visibility
 
-const heroImages = document.querySelectorAll(".hero-img-small, .hero-img-large");
+const heroLargeImages = document.querySelectorAll(".hero-img-large");
+const heroSmallImages = document.querySelectorAll(".hero-img-small");
 
-heroImages.forEach(heroImage => {
+heroLargeImages.forEach(heroImage => {
   if (heroImage) {
-    // Add glow class immediately on load
+    // Add visible and glow classes immediately on load
+    heroImage.classList.add("visible");
     heroImage.classList.add("glow");
 
     const heroObserver = new IntersectionObserver((entries) => {
@@ -132,6 +134,25 @@ heroImages.forEach(heroImage => {
           heroImage.classList.add("glow");
         } else {
           heroImage.classList.remove("glow");
+        }
+      });
+    }, { threshold: 0.5 });
+
+    heroObserver.observe(heroImage);
+  }
+});
+
+heroSmallImages.forEach(heroImage => {
+  if (heroImage) {
+    // Add visible class immediately on load
+    heroImage.classList.add("visible");
+
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heroImage.classList.add("visible");
+        } else {
+          heroImage.classList.remove("visible");
         }
       });
     }, { threshold: 0.5 });

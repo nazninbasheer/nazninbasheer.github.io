@@ -207,13 +207,12 @@ h2 ,h1 {
 .hero-right {
   position: absolute;
   top: 0;
-  right: -50px;
+  right: -70px;
   width: 500px;
   height: 500px;
   z-index: 10;
   flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
+  display: flex; 
 }
 
 .hero-right .hero-img-small,
@@ -1202,9 +1201,12 @@ body.dark .hamburger i {
   }
 }
 
-.hero-img-small.glow,
-.hero-img-large.glow {
+.hero-img-small.visible,
+.hero-img-large.visible {
   opacity: 1;
+}
+
+.hero-img-large.glow {
   animation: glowPulse 2s infinite alternate;
 }
 
