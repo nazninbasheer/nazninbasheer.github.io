@@ -63,7 +63,7 @@
     </p>
     <div class="buttons">
         <a href="about.html" class="btn primary">More</a>
-        <a href="#" target="_blank" class="btn secondary">Resume</a>
+        <a href="assets/Naznin Basheer Resume Android&iOS.pdf" download class="btn secondary">Resume</a>
       </div>
         <div class="social-icons">
         <a href="https://www.linkedin.com/in/nazninbasheer21/" aria-label="LinkedIn">
@@ -188,15 +188,29 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message"></textarea>
-      <button type="submit" class="btn primary">Send</button>
-    </form>
-  </section>
+ <section id="contact" class="contact">
+  <h1>Let's talk...</h1>
+
+  <form id="contact-form">
+    <input type="hidden" name="access_key" value="72f7a48c-1d00-417c-8f96-1aee0f9eeab4" />
+     <input type="hidden" name="from_name" value="Mail From My Website" />
+     <input type="hidden" name="subject" value="New message from my site!" />
+
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <button type="submit" class="btn primary">Send</button>
+  </form>
+
+  <!-- Popup -->
+  <div id="success-popup" class="popup">
+    <div class="popup-box">
+      <p>🎉 Message sent successfully!</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

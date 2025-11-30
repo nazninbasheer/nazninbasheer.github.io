@@ -138,3 +138,48 @@ heroImages.forEach(heroImage => {
     heroObserver.observe(heroImage);
   }
 });
+
+// ==================== CONTACT FORM MAILTO ====================
+
+// Close popup function
+function closePopup() {
+  const popup = document.getElementById("success-popup");
+  if (popup) {
+    popup.style.display = "none";
+    window.location.hash = ""; // clear hash
+  }
+}
+
+// Handle form submission
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Show custom popup
+        const popup = document.getElementById("success-popup");
+        if (popup) popup.style.display = "flex";
+
+        this.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+        console.error(result);
+      }
+    } catch (error) {
+      alert("Error sending message. Please try again.");
+      console.error(error);
+    }
+  });
+}
