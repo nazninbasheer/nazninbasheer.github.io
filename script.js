@@ -75,8 +75,6 @@ window.addEventListener("scroll", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JS loaded ✅");
-
   // Typing animation
   const typingEl = document.getElementById("typing");
   if (typingEl) {
@@ -125,6 +123,9 @@ const heroImages = document.querySelectorAll(".hero-img-small, .hero-img-large")
 
 heroImages.forEach(heroImage => {
   if (heroImage) {
+    // Add glow class immediately on load
+    heroImage.classList.add("glow");
+
     const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -139,7 +140,7 @@ heroImages.forEach(heroImage => {
   }
 });
 
-// ==================== CONTACT FORM MAILTO ====================
+// ==================== CONTACT FORM ====================
 
 // Close popup function
 function closePopup() {
