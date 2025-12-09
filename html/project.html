@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="../css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -15,12 +15,12 @@
       <i class="fas fa-bars"></i>
     </button>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="certificate.html">Certificates</a>
+      <a href="../html/index.html">Home</a>
+      <a href="../html/about.html">About</a>
+      <a href="../html/skills.html">Skills</a>
+      <a href="../html/certificate.html">Certificates</a>
       <a href="#projects">Projects</a>
-      <a href="contact.html">Contacts</a>
+      <a href="../html/contact.html">Contacts</a>
       <button class="dark-toggle" onclick="toggleDarkMode()"></button>
     </nav>
      </header>
@@ -28,6 +28,16 @@
  <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-list grid-layout">
+
+        <div class="project-card">
+          <div class="project-text">
+              <h3>SwiftUI Task Manager</h3>
+              <p>A minimal SwiftUI app to add, edit, complete, and delete tasks,
+                 demonstrating state management and MVVM architecture.</p>
+              <a href="https://github.com/nazninbasheer/ToDo-iOS" class="btn view-project" target="_blank">View Project</a>
+          </div>
+      </div>
+
       <div class="project-card">
         <div class="project-text">
           <h3>CRUD iOS APP</h3>
@@ -38,6 +48,14 @@
           <a href="https://github.com/nazninbasheer/CRUD_iOS_APP" class="btn view-project" target="_blank">View Project</a>
         </div>
       </div>
+        <div class="project-card">
+        <div class="project-text">
+            <h3>Airport Car Rental</h3>
+            <p>A full-stack car rental platform built with Next.js and FastAPI. 
+              Users can search cars, select pickup & drop locations, and view car details with real-time availability.</p>
+            <a href="https://github.com/nazninbasheer/Car-Rental-Project" class="btn view-project" target="_blank">View Project</a>
+        </div>
+    </div>
 
       <div class="project-card">
         <div class="project-text">
@@ -50,7 +68,15 @@
           <a href="https://github.com/nazninbasheer/Chat_App" class="btn view-project" target="_blank">View Project</a>
         </div>
       </div>
-
+    
+      <div class="project-card">
+          <div class="project-text">
+              <h3>Teacher-Student Manager</h3>
+              <p>Developed an iOS app for managing Teachers and Students with CRUD functionality using Core Data.</p>
+              <a href="https://github.com/nazninbasheer/Core-Data-in-Swift" class="btn view-project" target="_blank">View Project</a>
+          </div>
+      </div>
+      
       <div class="project-card">
         <div class="project-text">
           <h3>Dictionary Web App</h3>
@@ -59,23 +85,6 @@
           </p>
           <a href="https://github.com/nazninbasheer/Word_Describer" class="btn view-project" target="_blank">View Project</a>
         </div>
-      </div>
-
-      <div class="project-card">
-          <div class="project-text">
-              <h3>SwiftUI Task Manager</h3>
-              <p>A minimal SwiftUI app to add, edit, complete, and delete tasks,
-                 demonstrating state management and MVVM architecture.</p>
-              <a href="https://github.com/nazninbasheer/ToDo-iOS" class="btn view-project" target="_blank">View Project</a>
-          </div>
-      </div>
-
-      <div class="project-card">
-          <div class="project-text">
-              <h3>Teacher-Student Manager</h3>
-              <p>Developed an iOS app for managing Teachers and Students with CRUD functionality using Core Data.</p>
-              <a href="https://github.com/nazninbasheer/Core-Data-in-Swift" class="btn view-project" target="_blank">View Project</a>
-          </div>
       </div>
 
       <div class="project-card">
@@ -108,21 +117,21 @@
   <footer>
     <div class="social-icons-f">
         <a href="https://www.linkedin.com/in/nazninbasheer21/" aria-label="LinkedIn">
-        <img src="assets\icons\linkedin.png" alt="LinkedIn icon"/>
+        <img src="../assets/icons/linkedin.png" alt="LinkedIn icon"/>
       </a>
       <a href="https://github.com/nazninbasheer" aria-label="GitHub">
-        <img src="assets\icons\github.png" alt="GitHub icon"/>
+        <img src="../assets/icons/github.png" alt="GitHub icon"/>
       </a>
-      <a href="contact.html" aria-label="Email">
-        <img src="assets\icons\mail.png" alt="Email icon"/>
+      <a href="../html/contact.html" aria-label="Email">
+        <img src="../assets/icons/mail.png" alt="Email icon"/>
       </a>
     </div>
     <p>© Naznin Basheer 😎. All rights reserved.</p>
     <div class="footer-curve">
-       
+
     </div>
   </footer>
-<script src="script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
 

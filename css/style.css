@@ -837,7 +837,7 @@ body.dark .skill-card {
 footer {
   text-align: center;
   padding: 2rem 0 0;
-  background: var(--light-bg) url('assets/images/footerBg.svg') no-repeat center center;
+  background: var(--light-bg) url('../assets/images/footerBg.svg') no-repeat center center;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -1069,7 +1069,7 @@ body.dark .project-card {
 }
 
 body.dark footer {
-  background: var(--dark-bg) url('assets/images/footerBg.svg') no-repeat center center;
+  background: var(--dark-bg) url('../assets/images/footerBg.svg') no-repeat center center;
   background-size: cover;
 }
 
@@ -1152,7 +1152,9 @@ body.dark .light-badge { display: none; }
   white-space: nowrap;
   border-right: 2px solid var(--cursor-color, #000);
 }
-
+body.dark .typing {
+  border-right: 2px solid var(--light-bg);
+}
 
 /* Hamburger Menu */
 .hamburger {
