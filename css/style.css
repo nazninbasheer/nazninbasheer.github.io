@@ -941,6 +941,30 @@ footer p {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.live-view-btn {
+  width: 30px;
+  height: 30px;
+  background: var(--brand-yellow);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.live-view-btn:hover {
+  background: var(--brand-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 body.dark .back-to-top {
   background: var(--dark-card);
   color: var(--light-bg);
@@ -948,6 +972,17 @@ body.dark .back-to-top {
 }
 
 body.dark .back-to-top:hover {
+  background: var(--brand-yellow);
+  color: #000;
+}
+
+body.dark .live-view-btn {
+  background: var(--dark-card);
+  color: var(--light-bg);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+body.dark .live-view-btn:hover {
   background: var(--brand-yellow);
   color: #000;
 }
